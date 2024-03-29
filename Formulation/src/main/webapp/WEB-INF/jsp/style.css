@@ -1,0 +1,35 @@
+.checkbox-label {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    color: green;
+}
+
+input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: '\2713'; /* Unicode checkmark character */
+    font-size: 24px; /* Adjust size as needed */
+    color: green; /* Change color to green when selected */
+    font-weight: bold; /* Make the checkmark bold */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
